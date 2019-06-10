@@ -2,13 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 class App extends React.Component {
-  //JS component. Overwrites React.Components contructor fnt. By calling super(props), references React.Components constructor fnt
-  constructor(props) {
-    super(props);
-
-    //This is the only time we directly change state;
-    this.state = { lat: null, errMsg: '' };
-  }
+  state = { lat: null, errMsg: '' };
 
   componentDidMount() {
     window.navigator.geolocation.getCurrentPosition(
